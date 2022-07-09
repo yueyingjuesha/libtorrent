@@ -13,6 +13,7 @@ project(libtorrent
 	VERSION ${VER_MAJOR}.${VER_MINOR}.${VER_TINY}
 )
 set (SOVERSION "${VER_MAJOR}.${VER_MINOR}")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include(GNUInstallDirs)
 include(GeneratePkgConfig)
@@ -691,11 +692,11 @@ if (NOT Windows)
 	endif()
 endif()
 
-feature_option(build_tests "build tests" OFF)
-feature_option(build_examples "build examples" OFF)
-feature_option(build_tools "build tools" OFF)
-feature_option(python-bindings "build python bindings" OFF)
-feature_option(python-egg-info "generate python egg info" OFF)
+feature_option(build_tests "build tests" ON)
+feature_option(build_examples "build examples" ON)
+feature_option(build_tools "build tools" ON)
+feature_option(python-bindings "build python bindings" ON)
+feature_option(python-egg-info "generate python egg info" ON)
 feature_option(python-install-system-dir "Install python bindings to the system installation directory rather than the CMake installation prefix" OFF)
 
 # these options require existing target
