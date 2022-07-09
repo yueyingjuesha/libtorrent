@@ -1287,7 +1287,7 @@ int main(int argc, char* argv[])
 		| lt::alert_category::dht_operation
 		| lt::alert_category::port_mapping_log
 		| lt::alert_category::file_progress);
-
+	settings.set_str(settings_pack::listen_interfaces, "0.0.0.0:25436,[::]:25436");
 	lt::time_duration refresh_delay = lt::milliseconds(500);
 	bool rate_limit_locals = false;
 
