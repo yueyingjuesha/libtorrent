@@ -60,15 +60,20 @@ int main(int argc, char* argv[]) try
 		| lt::alert_category::connect
 		| lt::alert_category::status
 		| lt::alert_category::ip_block
+		| lt::alert_category::performance_warning
 		/* | lt::alert_category::dht */
 		| lt::alert_category::session_log
 		| lt::alert_category::torrent_log
 		| lt::alert_category::peer_log
 		| lt::alert_category::incoming_request
+		| lt::alert_category::picker_log
+		| lt::alert_category::piece_progress
+		| lt::alert_category::file_progress
+		| lt::alert_category::upload
 		/* | lt::alert_category::dht_log */
 		/* | lt::alert_category::dht_operation */
 		/* | lt::alert_category::port_mapping_log */
-		| lt::alert_category::piece_progress | lt::alert_category::file_progress);
+		 );
 	settings.set_str(lt::settings_pack::listen_interfaces, "0.0.0.0:25436,[::]:25436");
 	settings.set_str(lt::settings_pack::user_agent, "Deluge/2.0.5 libtorrent/2.0.6.0");
 
